@@ -1,8 +1,23 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 .App {
   background-color: aliceblue;
   text-align: center;
   height: 100vh;
   width: 30vw;
+  min-width: 26rem;
   display: flex;
   flex-direction: column;
 }
@@ -39,7 +54,27 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  display: flex;
+  border-top: 1px solid gainsboro;
+  padding: 8px 0;
+}
+
+footer > a {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+footer > a:hover {
+  background-color: navajowhite;
+}
+
+.navImg {
+  max-height: 2rem;
 }
