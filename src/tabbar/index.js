@@ -35,6 +35,18 @@ export default class Tabbar extends Component {
     }
   }
 
+  componentDidMount() {
+    const p = window.location.pathname;
+    tabbarArr.map((item, key) => {
+      if (item.path === p) {
+        this.setState({
+          index: key
+        })
+      }
+      return null;
+    });
+  }
+
   itemChange(key) {
     this.setState({
       index: key
