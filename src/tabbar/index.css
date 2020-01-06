@@ -5,10 +5,16 @@ footer {
 }
 
 footer>a {
-  display: inline-block;
   flex-grow: 1;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0 20px;
+  font-size: small;
 }
 
 .navImg {
   max-height: 2rem;
+  vertical-align: middle;
 }
