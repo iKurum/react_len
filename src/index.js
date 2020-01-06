@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import './assets/css/index.css';
 import logo from './assets/img/logo.png';
-import home from './assets/img/home.png';
-import about from './assets/img/about.png';
 
-import RoutePage from './route';
+import routeCon from './model/routeList';
+import RouteWithSubRouters from './model/routeWithSubRouters';
+import Tabbar from './tabbar/index';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className="App">
@@ -19,16 +19,11 @@ class App extends React.Component {
         </header>
         <Router>
           <div className="App-body">
-            <RoutePage />
+            {
+              routeCon.map((item, key) => <RouteWithSubRouters key={key} {...item} />)
+            }
           </div>
-          <footer>
-            <NavLink to="/">
-              <img src={home} className='navImg' alt="" />
-            </NavLink>
-            <NavLink to="/about">
-              <img src={about} className='navImg' alt="" />
-            </NavLink>
-          </footer>
+          <Tabbar />
         </Router>
       </div>
     );

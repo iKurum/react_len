@@ -59,22 +59,3 @@ code {
     transform: rotate(360deg);
   }
 }
-
-footer {
-  display: flex;
-  border-top: 1px solid gainsboro;
-  padding: 8px 0;
-}
-
-footer > a {
-  display: inline-block;
-  flex-grow: 1;
-}
-
-footer > a:hover {
-  background-color: navajowhite;
-}
-
-.navImg {
-  max-height: 2rem;
-}
