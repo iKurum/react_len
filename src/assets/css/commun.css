@@ -1,14 +1,19 @@
 ul {
+  background-color: white;
   list-style: none;
-  padding: 0 1rem;
+  padding: 0 0 0 1rem;
+  margin: 0;
   text-align: left;
 }
 
 li {
   display: flex;
-  margin-bottom: 1rem;
   height: 3.75rem;
   cursor: pointer;
+}
+
+li:nth-last-child(1) {
+  padding-bottom: .625rem;
 }
 
 li>div:nth-child(1) {
@@ -19,13 +24,55 @@ li>div:nth-child(2) {
   line-height: .3rem;
   margin-left: 1.4rem;
   flex-grow: 2;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid gainsboro;
 }
 
 img {
   border-radius: 50%;
 }
 
+.lastLi {
+  margin: 0;
+  padding: 0;
+  cursor: auto;
+}
+
 .lastLi>p {
   margin: 1.25rem auto;
+  color: gray;
+}
+
+.listBox {
+  height: 100%;
+  width: calc(100% + 1.25rem);
+  overflow-y: auto;
+}
+
+.sortList {
+  margin: 8px 0;
+  padding-left: 1rem;
+}
+
+.listNav {
+  position: absolute;
+  right: 3px;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.listNav>a,
+.listNav>p {
+  text-decoration: none;
+  color: #515151;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  font-size: small;
+  cursor: default;
+}
+
+.listNav>a:hover {
+  background-color: #66ccff;
 }

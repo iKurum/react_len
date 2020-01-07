@@ -1,26 +1,26 @@
-import Home from '../compenent/Home';
+import Chat from '../compenent/Chat';
 import Commun from '../compenent/Commun';
-import Find from '../compenent/Find';
+// import Find from '../compenent/Find';
 import About from '../compenent/About';
 
 const routeCon = [
   {
     path: '/',
-    component: Home,
+    component: Chat,
     exact: true
   },
   {
     path: '/home',
-    component: Home,
+    component: Chat,
   },
   {
     path: '/commun',
     component: Commun,
   },
-  {
-    path: '/find',
-    component: Find,
-  },
+  // {
+  //   path: '/find',
+  //   component: Find,
+  // },
   {
     path: '/about',
     component: About,
