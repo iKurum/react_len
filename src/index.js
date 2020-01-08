@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 import routeCon from './model/routeList';
 import RouteWithSubRouters from './model/routeWithSubRouters';
 import Tabbar from './model/tabbar';
 import tabbarArr from './model/tabbarArr';
 import HtmlWithHeader from './model/htmlWithHeader';
-import './assets/css/index.css';
+import css from './assets/css/index.module.css';
 
 class App extends Component {
   constructor(props) {
@@ -35,10 +34,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      //禁止右键
+      // <div className="App" onContextMenu={event => event.preventDefault()}>
+      <div className={css.App}>
         <HtmlWithHeader title={this.state.title} />
         <Router>
-          <div className="App-body">
+          <div className={css.AppBody}>
             {
               routeCon.map((item, key) => <RouteWithSubRouters key={key} {...item} />)
             }

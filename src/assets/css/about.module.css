@@ -1,0 +1,12 @@
+.conBox {
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
+.userInfo {
+  display: flex;
+}
+
+.userInfo>div:nth-last-child(1) {
+  flex-grow: 2;
+}

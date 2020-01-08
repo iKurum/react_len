@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import tabbarArr from './tabbarArr';
-import '../assets/css/tabbar.css';
+import css from '../assets/css/tabbar.module.css';
 
 export default class Tabbar extends Component {
   constructor(props) {
@@ -36,7 +35,7 @@ export default class Tabbar extends Component {
       return (
         <Link to={item.path} key={key} onClick={() => this.itemChange(key, item.name)}>
           <figure>
-            <img src={this.state.index === key ? item.imgAct : item.img} className='navImg' alt="" />
+            <img src={this.state.index === key ? item.imgAct : item.img} className={css.navImg} alt="" />
             <figcaption style={{ color: (this.state.index === key ? '#66ccff' : '#000') }}>{item.name}</figcaption>
           </figure>
         </Link>
@@ -44,7 +43,7 @@ export default class Tabbar extends Component {
     });
 
     return (
-      <footer className='tabbar'>
+      <footer className={css.tabbar}>
         {tab}
       </footer>
     );

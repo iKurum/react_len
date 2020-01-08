@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
-import '../assets/css/commun.css';
+import css from '../assets/css/commun.module.css';
 
 const listArr = ['↑', '♥', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '#'];
 
@@ -72,9 +71,9 @@ export default class Commun extends Component {
         let l = item.data.map((i, k) => {
           let s = '/api/40/' + color16();
           return (
-            <li key={k}>
+            <li key={k} className={css.listLi}>
               <div>
-                <img src={s} alt='' />
+                <img src={s} alt='' className={css.put} />
               </div>
               <div>
                 <p>{i.name}</p>
@@ -86,8 +85,8 @@ export default class Commun extends Component {
 
         return (
           <div id={item.sort} key={key} style={{ textAlign: 'left' }}>
-            <p className='sortList'>{item.sort}</p>
-            <ul>
+            <p className={css.ortList}>{item.sort}</p>
+            <ul className={css.listUl}>
               {l}
             </ul>
           </div>
@@ -95,19 +94,19 @@ export default class Commun extends Component {
       })
 
       return (
-        <div className='listBox'>
-          <div className='listNav'>
+        <div className={css.listBox}>
+          <div className={css.listNav}>
             {listNav}
           </div>
           {list}
           <ul>
-            <li className='lastLi'><p>{this.state.data.length} 位联系人</p></li>
+            <li className={css.lastLi}><p>{this.state.data.length} 位联系人</p></li>
           </ul>
         </div>
       );
     } else {
       return (
-        <div className='listBox'>
+        <div className={css.listBox}>
           <p>加载中 ...</p>
         </div>
       );

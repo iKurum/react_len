@@ -1,4 +1,4 @@
-ul {
+.listUl {
   background-color: white;
   list-style: none;
   padding: 0 0 0 1rem;
@@ -6,28 +6,28 @@ ul {
   text-align: left;
 }
 
-li {
+.listLi {
   display: flex;
   height: 3.75rem;
   cursor: pointer;
 }
 
-li:nth-last-child(1) {
+.listLi:nth-last-child(1) {
   padding-bottom: .625rem;
 }
 
-li>div:nth-child(1) {
+.listLi>div:nth-child(1) {
   line-height: 5rem;
 }
 
-li>div:nth-child(2) {
+.listLi>div:nth-child(2) {
   line-height: .3rem;
   margin-left: 1.4rem;
   flex-grow: 2;
   border-bottom: 1px solid gainsboro;
 }
 
-img {
+.put {
   border-radius: 50%;
 }
 

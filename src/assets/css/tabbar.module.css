@@ -1,0 +1,9 @@
+footer>a>figure {
+  margin: 0 20px;
+  font-size: small;
+}
+
+.navImg {
+  max-height: 2rem;
+  vertical-align: middle;
+}
