@@ -55,7 +55,7 @@ export default class Commun extends Component {
   }
 
   render() {
-    let s = 'https://via.placeholder.com/40/' + color16();
+    let s = '/api/40/' + color16();
     let listNav = listArr.map((v, k) => {
       if (/[A-Z]/.test(v)) {
         return <a href={`#${v}`} key={k}>{v}</a>;
@@ -71,7 +71,7 @@ export default class Commun extends Component {
     if (this.state.isSuccess) {
       let list = this.getSortList(this.state.data).map((item, key) => {
         let l = item.data.map((i, k) => {
-          s = 'https://via.placeholder.com/40/' + color16();
+          s = '/api/40/' + color16();
           return (
             <li key={k}>
               <div>

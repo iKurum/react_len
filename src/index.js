@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import routeCon from './model/routeList';
 import RouteWithSubRouters from './model/routeWithSubRouters';
 import Tabbar from './model/tabbar';
+import tabbarArr from './model/tabbarArr';
 import HtmlWithHeader from './model/htmlWithHeader';
 import './assets/css/index.css';
 
@@ -19,6 +20,16 @@ class App extends Component {
   getTitle = val => {
     this.setState({
       title: val
+    })
+  }
+
+  componentDidMount() {
+    tabbarArr.forEach((v, _) => {
+      if (v.path === window.location.pathname) {
+        this.setState({
+          title: v.name
+        })
+      }
     })
   }
 
