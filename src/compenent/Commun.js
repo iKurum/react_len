@@ -16,7 +16,7 @@ export default class Commun extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/mock.json')
+    axios.get('./mock.json')
       .then(res => {
         this.setState({
           data: res.data.data,
