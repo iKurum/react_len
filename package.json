@@ -2,6 +2,7 @@
   "name": "react_",
   "version": "0.1.0",
   "private": true,
+  "pathname": "./",
   "dependencies": {
     "axios": "^0.19.1",
     "http-proxy-middleware": "^0.20.0",
