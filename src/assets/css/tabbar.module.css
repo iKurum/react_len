@@ -1,3 +1,8 @@
+footer>a {
+  flex-grow: 1;
+  text-decoration: none;
+}
+
 footer>a>figure {
   margin: 0 20px;
   font-size: small;

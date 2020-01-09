@@ -11,6 +11,11 @@ body {
   user-select: none;
 }
 
+html,body,div,ul,li,figure,p {
+  padding: 0;
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -22,9 +27,9 @@ footer {
   padding: 8px 0;
 }
 
-footer>a {
-  flex-grow: 1;
-  text-decoration: none;
+ul, li {
+  list-style: none;
+  background-color: white;
 }
 
 .App {

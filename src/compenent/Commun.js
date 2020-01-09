@@ -84,8 +84,8 @@ export default class Commun extends Component {
         });
 
         return (
-          <div id={item.sort} key={key} style={{ textAlign: 'left' }}>
-            <p className={css.ortList}>{item.sort}</p>
+          <div id={item.sort} key={key} className={css.listArr}>
+            <p>{item.sort}</p>
             <ul className={css.listUl}>
               {l}
             </ul>

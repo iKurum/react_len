@@ -1,8 +1,13 @@
+.listArr {
+  text-align: left;
+}
+
+.listArr>p {
+  margin: 5px 0 5px 15px;
+}
+
 .listUl {
-  background-color: white;
-  list-style: none;
   padding: 0 0 0 1rem;
-  margin: 0;
   text-align: left;
 }
 
@@ -27,18 +32,21 @@
   border-bottom: 1px solid gainsboro;
 }
 
+.listLi>div:nth-child(2)>p {
+  margin: 16px 0;
+}
+
 .put {
   border-radius: 50%;
 }
 
 .lastLi {
-  margin: 0;
-  padding: 0;
   cursor: auto;
 }
 
 .lastLi>p {
-  margin: 1.25rem auto;
+  margin: 0 auto;
+  padding: 1rem 0;
   color: gray;
 }
 
