@@ -23,6 +23,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log('process.env.NODE_ENV: ' + process.env.NODE_ENV);
     tabbarArr.forEach((v, _) => {
       if (v.path === window.location.pathname) {
         this.setState({
