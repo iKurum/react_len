@@ -67,9 +67,14 @@ export default class Commun extends Component {
     });
 
     if (this.state.isSuccess) {
+      console.log('process.env.NODE_ENV: ' + process.env.NODE_ENV);
       let list = this.getSortList(this.state.data).map((item, key) => {
         let l = item.data.map((i, k) => {
-          let s = '/api/40/' + color16();
+          let s = process.env.NODE_ENV === 'development'
+            ?
+            ('/api/40/' + color16())
+            :
+            ('https://via.placeholder.com/40/' + color16());
           return (
             <li key={k} className={css.listLi}>
               <div>
