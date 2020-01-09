@@ -9,6 +9,12 @@ import css from '../assets/css/about.module.css';
 
 class About extends Component {
   render() {
+    let s = process.env.NODE_ENV === 'development'
+      ?
+      ('/api/80/66ccff')
+      :
+      ('https://via.placeholder.com/80/66ccff');
+    
     return (
       <div>
         <div className={css.conBox}>
@@ -17,7 +23,7 @@ class About extends Component {
           </figure>
           <div className={css.userInfo}>
             <div>
-              <img src='/api/80/66ccff' alt='' />
+              <img src={s} alt='' />
             </div>
             <div>
               <p>Emiliatan</p>
