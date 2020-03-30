@@ -36,8 +36,8 @@ class App extends Component {
   render() {
     return (
       //禁止右键
-      // <div className="App" onContextMenu={event => event.preventDefault()}>
-      <div className={css.App}>
+      <div className={css.App} onContextMenu={event => event.preventDefault()}>
+      {/* <div className={css.App}> */}
         <HtmlWithHeader title={this.state.title} />
         <Router>
           <div className={css.AppBody}>

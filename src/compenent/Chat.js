@@ -1,13 +1,7 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        Chat
-      </div>
-    );
-  }
+export default function Home() {
+  const [name, setName] = useState("");
+
+  return <input value={name} onChange={e => setName(e.target.value)} />;
 }
-
-export default Home;
