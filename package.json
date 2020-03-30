@@ -4,6 +4,8 @@
   "private": true,
   "pathname": "./",
   "dependencies": {
+    "acorn": ">=5.7.4",
+    "minimist": ">=1.2.2",
     "axios": "^0.19.1",
     "http-proxy-middleware": "^0.20.0",
     "react": "^16.12.0",
