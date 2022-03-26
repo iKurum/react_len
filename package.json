@@ -5,7 +5,7 @@
   "pathname": "./",
   "dependencies": {
     "acorn": ">=7.1.1",
-    "minimist": ">=1.2.2",
+    "minimist": ">=1.2.6",
     "axios": "^0.19.1",
     "http-proxy-middleware": "^0.20.0",
     "react": "^16.12.0",
